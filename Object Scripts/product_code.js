@@ -1,11 +1,6 @@
 "use strict";
 
 function parsePartCode(code){
-    
-
-
-
-
     let result = {
         supplierCode: getSupplierCode(code),
         productNumber: getProductNumber(code),
