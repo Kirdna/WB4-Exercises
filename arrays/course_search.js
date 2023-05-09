@@ -73,3 +73,21 @@ for (let i = 0; i < courses.length; i++) {
     console.log(msg);
 
 //4. These classes meet in "Classroom 1"?
+let results2 = [];
+for (let i = 0; i < courses.length; i++) {
+    if (courses[i].Location === "Classroom 1") {
+        results2.push(courses[i]);
+    }
+  }
+
+   // function makes my string into one line + ", "
+   function getClassRoom1(courses){
+    let msg3 = "";
+    for (let i = 0 ; i < courses.length; i++){
+        msg3 += courses[i].Title + ", "; 
+    }
+    return msg3.substring(0, msg3.length - 2)
+  }
+
+ let msg3 = `The courses that meet in Classroom 1 are: ${getClassRoom1(results2)}.`;
+    console.log(msg3);
