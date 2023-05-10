@@ -35,12 +35,10 @@ console.log(msg);
 
 //2. Which candies have "Bar" in it?
 let barCandies = [];
-let i = 0;
-while (i < products.length) {
+for (let i = 0; i < products.length; i++) {
     if (products[i].name.includes("Bar")) {
         barCandies.push(products[i]);
     }
-    i++;
 }
 //---code is how to structure the output in a single line with ", "
 function sentence(products) {
@@ -57,7 +55,6 @@ console.log(msg2);
 //3. Do we carry swedish fish?
 for (let i = 0; i < products.length; i++) {
     if (products[i].name === "Swedish Fish") {
-      console.log(`We do carry ${products[i].name}`);
+        console.log(`We do carry ${products[i].name}`);
     }
-  }
-  
+}
