@@ -19,16 +19,45 @@ for (let i = 0; i < products.length; i++) {
     if ((products[i].Price) < 4.00) {
         results.push(products[i]);
     }
-  }
+}
 
-  // function makes my string into one line + ", "
-  function getCheapCandies(products){
+//---function makes my string into one line + ", "
+function getCheapCandies(products) {
     let msg = "";
-    for (let i = 0 ; i < products.length; i++){
-        msg += products[i].name + ", "; 
+    for (let i = 0; i < products.length; i++) {
+        msg += products[i].name + ", ";
     }
     return msg.substring(0, msg.length - 2)
-  }
+}
 
- let msg = `The candies that cost less than $4.00 are: ${getCheapCandies(results)}.`;
-    console.log(msg);
+let msg = `The candies that cost less than $4.00 are: ${getCheapCandies(results)}.`;
+console.log(msg);
+
+//2. Which candies have "Bar" in it?
+let barCandies = [];
+let i = 0;
+while (i < products.length) {
+    if (products[i].name.includes("Bar")) {
+        barCandies.push(products[i]);
+    }
+    i++;
+}
+//---code is how to structure the output in a single line with ", "
+function sentence(products) {
+    let msg2 = "";
+    for (let i = 0; i < products.length; i++) {
+        msg2 += products[i].name + ", ";
+    }
+    return msg2.substring(0, msg2.length - 2)
+}
+
+let msg2 = `The candies that have "Bar" in their name are: ${sentence(barCandies)}.`;
+console.log(msg2);
+
+//3. Do we carry swedish fish?
+for (let i = 0; i < products.length; i++) {
+    if (products[i].name === "Swedish Fish") {
+      console.log(`We do carry ${products[i].name}`);
+    }
+  }
+  
